@@ -14,7 +14,7 @@ gpx_dir_to_df <- function(dir) {
   track_list <- list()
   for (i in seq_along(gpx_files)) {
     message(sprintf("Parsing %s", gpx_files[i]))
-    xml_file      <- xml2::xml_ns_strip(read_xml(gpx_files[i]))
+    xml_file      <- xml2::xml_ns_strip(xml2::read_xml(gpx_files[i]))
     xml_tracks    <- xml2::xml_find_all(xml_file, ".//trk")
     track_list[i] <- .parse_tracks(xml_tracks, i)
   }
