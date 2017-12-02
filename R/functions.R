@@ -39,17 +39,17 @@ gpx_dir_to_df <- function(dir) {
     type    <- xml2::xml_find_all(trks[i], ".//type")[[1]]
     trk_pts <- xml2::xml_find_all(trks[i], ".//trkpt")
 
-    return(list(trk_name = as_list(name)[[1]],
+    return(list(trk_name = xml2::as_list(name)[[1]],
                 trk_id   = paste0(file_id, '-', i), 
-                type     = as_list(type)[[1]], 
+                type     = xml2::as_list(type)[[1]], 
                 pts      = .parse_points(trk_pts)))
   })
 }
 
 .parse_points <- function(pts) {
   lapply(pts, function(pt) {
-    attr <- xml_attrs(pt)
-    vals <- as_list(pt)
+    attr <- xml2::xml_attrs(pt)
+    vals <- xml2::as_list(pt)
     lat  <- as.double(attr['lat'])
     lon  <- as.double(attr['lon'])
     ele  <- as.double(vals$ele[[1]])
