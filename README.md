@@ -5,6 +5,9 @@ GarConGPX was written out of my desire to facilitate the extraction and anlysis 
 
 [Instructions for downloading said .gpx files are available here](https://support.strava.com/hc/en-us/articles/216917807-Exporting-files-from-Garmin-Connect). 
 
+To Install: 
+1. devtools::install_github("elsage/GarConGPX")
+
 To use: 
 1. Save your .gpx files to a common directory; e.g. */desktop/gpx_files*
 2. Pass the path for the directory where your Garmin .GPX files are stored to ```GarConGPX::gpx_dir_to_df()```.
