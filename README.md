@@ -3,7 +3,7 @@
 ## Purpose
 GarConGPX was written out of my desire to facilitate the extraction and anlysis of data downloaded from the Garmin Connect platform, specifically the .gpx files that Garmin makes available for download.
 
-Instructions for downloading said .gpx files are available here: [https://support.strava.com/hc/en-us/articles/216917807-Exporting-files-from-Garmin-Connect]
+Instructions for downloading said .gpx files are available [here] (https://support.strava.com/hc/en-us/articles/216917807-Exporting-files-from-Garmin-Connect).
 
 To use: 
 1. Save your .gpx files to a common directory ***e.g. /desktop/gpx_files ***
