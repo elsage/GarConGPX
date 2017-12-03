@@ -1,14 +1,11 @@
+#' Read Dir of .GPX Files to R Dataframe
+#' @name gpx_dir_to_df
+#' @param dir The directory where you have saved your .gpx files.
+#' @return A dataframe the .gpx data. The dataframe contains information
+#'   about latitude, longitude, elevation, datetime, activity,
+#'   the activity type, miles and kilometer splits for the activity.
 #' @export
 gpx_dir_to_df <- function(dir) {
-#' Read Dir of .GPX Files to R Dataframe
-#' 
-#' Args:
-#'   dir: The directory where you have saved your .gpx files.
-#'  
-#' Returns: 
-#'   A dataframe the .gpx data. The dataframe contains information
-#'   about latitude, longitude, elevation, datetime, activity,
-#'   the activity type, miles and kilometer splits for the activity. 
   dir_files  <- list.files(dir, full.names = TRUE)
   gpx_files  <- dir_files[grepl("\\.GPX", toupper(dir_files))]
   track_list <- list()
