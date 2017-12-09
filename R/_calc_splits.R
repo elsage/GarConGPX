@@ -1,5 +1,5 @@
 #' Calculate splits by type
-#' @name calc_splits
+#' @name .calc_splits
 #' @param cum_distance ordered vector of cumulative distances
 #' @param split_type denotes distance at which split occurs
 #' @return cumulative distances between successive coordinates. 

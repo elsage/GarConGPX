@@ -1,5 +1,5 @@
 #' Calculate the cumulative distance between points.
-#' @name calc_cum_distance
+#' @name .calc_cum_distance
 #' @param lon ordered vector of longitude marks.
 #' @param lat ordered vector of latitude marks.
 #' @return cumulative distances between successive coordinates.

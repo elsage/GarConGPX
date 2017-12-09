@@ -1,5 +1,5 @@
 #' Converts list of tracks into a dataframe
-#' @name gpx_list_to_df
+#' @name .gpx_list_to_df
 #' @param trk_lst list of tracks extracted from .gpx file(s)
 #' @return dataframe containing track data
 .gpx_list_to_df <- function(trk_lst) {

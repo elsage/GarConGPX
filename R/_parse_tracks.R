@@ -1,5 +1,5 @@
 #' Find xml nodes and extract attributes
-#' @name parse_tracks
+#' @name .parse_tracks
 #' @param trks nodelist of <trk> nodes.
 #' @param file_id index of file being parsed in directory.
 #' @return a list containing the track name, track id, activity type
