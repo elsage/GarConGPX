@@ -4,6 +4,7 @@
 #' @param file_id index of file being parsed in directory.
 #' @return a list containing the track name, track id, activity type
 #'   and (most importantly) the track points.
+#' @export
 parse_tracks <- function(trks, file_id) {
   lapply(seq_along(trks), function(i) {
     name    <- xml2::xml_find_all(trks[i], ".//name")[[1]]

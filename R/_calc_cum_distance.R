@@ -3,6 +3,7 @@
 #' @param lon ordered vector of longitude marks.
 #' @param lat ordered vector of latitude marks.
 #' @return cumulative distances between successive coordinates.
+#' @export
 calc_cum_distance <- function(lon, lat) {
   vapply(seq_along(lat), function(i) {
     if (i == 1) return(0)
