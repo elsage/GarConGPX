@@ -7,6 +7,6 @@ parse_tracks <- function(trks, file_id) {
     return(list(trk_name = xml2::as_list(name)[[1]],
                 trk_id   = paste0(file_id, '-', i), 
                 type     = xml2::as_list(type)[[1]], 
-                pts      = .parse_points(trk_pts)))
+                pts      = parse_points(trk_pts)))
   })
 }
