@@ -1,9 +1,3 @@
-#' Extract data associated with <trkpt> nodes.
-#' @name parse_points 
-#' @param pts nodelist of <trkpt> nodes.
-#' @return a list containing the latitude, longitude, elevation
-#'   and time associated with the <trkpt> node.
-#' @export
 parse_points <- function(pts) {
   lapply(pts, function(pt) {
     attr <- xml2::xml_attrs(pt)

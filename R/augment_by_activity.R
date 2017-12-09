@@ -1,9 +1,3 @@
-#' Receive the processed data and calculate additional statistics.
-#' @name augment_by_activity
-#' @param df Dataframe resulting from processed directory of .gpx files.
-#' @return Augmented dataframe contains cumulative distance, 
-#'   mile and kilometer splits
-#' @export
 augment_by_activity <- function(df) {
    activity_list   <- list()
    unique_activity <- unique(df$activity_id)
