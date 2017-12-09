@@ -1,10 +1,10 @@
 #' Find xml nodes and extract attributes
-#' @name .parse_tracks
+#' @name parse_tracks
 #' @param trks nodelist of <trk> nodes.
 #' @param file_id index of file being parsed in directory.
 #' @return a list containing the track name, track id, activity type
 #'   and (most importantly) the track points.
-.parse_tracks <- function(trks, file_id) {
+parse_tracks <- function(trks, file_id) {
   lapply(seq_along(trks), function(i) {
     name    <- xml2::xml_find_all(trks[i], ".//name")[[1]]
     type    <- xml2::xml_find_all(trks[i], ".//type")[[1]]

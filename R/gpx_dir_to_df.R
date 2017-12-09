@@ -13,10 +13,10 @@ gpx_dir_to_df <- function(dir) {
     message(sprintf("Parsing %s", gpx_files[i]))
     xml_file      <- xml2::xml_ns_strip(xml2::read_xml(gpx_files[i]))
     xml_tracks    <- xml2::xml_find_all(xml_file, ".//trk")
-    track_list[i] <- .parse_tracks(xml_tracks, i)
+    track_list[i] <- parse_tracks(xml_tracks, i)
   }
-  df     <- .gpx_list_to_df(track_list)
-  aug_df <- .augment_by_activity(df)
+  df     <- gpx_list_to_df(track_list)
+  aug_df <- augment_by_activity(df)
   colnames(aug_df) <- c("latitude", 
                         "longitude", 
                         "elevation", 
